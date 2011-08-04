@@ -30,6 +30,7 @@ PRODUCT_COPY_FILES += \
 
 # OMX
 PRODUCT_COPY_FILES += \
+    vendor/motorola/olympus/proprietary/lib/libnvsm.so:system/lib/libnvsm.so \
     vendor/motorola/olympus/proprietary/lib/libhwmediaplugin.so:system/lib/libhwmediaplugin.so \
     vendor/motorola/olympus/proprietary/lib/libhwmediaplugin.so:obj/lib/libhwmediaplugin.so \
     vendor/motorola/olympus/proprietary/lib/libhwmediarecorder.so:system/lib/libhwmediarecorder.so \
@@ -69,14 +70,23 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/bin/Hostapd:system/bin/Hostapd \
     vendor/motorola/olympus/proprietary/bin/remountpds:system/bin/remountpds \
     vendor/motorola/olympus/proprietary/bin/battd:system/bin/battd \
+    vendor/motorola/olympus/proprietary/bin/usbd:system/bin/usbd \
+    vendor/motorola/olympus/proprietary/bin/mdm_panicd:system/bin/mdm_panicd \
+    vendor/motorola/olympus/proprietary/bin/rild:system/bin/rild \
+    vendor/motorola/olympus/proprietary/bin/pppd:system/bin/pppd \
+    vendor/motorola/olympus/proprietary/bin/secclkd:system/bin/secclkd \
+    vendor/motorola/olympus/proprietary/bin/testpppd:system/bin/testpppd \
+    vendor/motorola/olympus/proprietary/bin/pppd-ril:system/bin/pppd-ril \
+    vendor/motorola/olympus/proprietary/bin/chat-ril:system/bin/chat-ril \
     vendor/motorola/olympus/proprietary/bin/touchpad:system/bin/touchpad
 
-# Wifi firmware
+# Wifi/bt firmware
 PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/etc/wl/nvram.txt:system/etc/wl/nvram.txt \
     vendor/motorola/olympus/proprietary/etc/wl/sdio-ag-cdc-11n-mfgtest-roml-seqcmds.bin:system/etc/wl/sdio-ag-cdc-11n-mfgtest-roml-seqcmds.bin \
     vendor/motorola/olympus/proprietary/etc/wl/sdio-ag-cdc-full11n-minioctl-roml-pno-wme-aoe-pktfilter-keepalive.bin:system/etc/wl/sdio-ag-cdc-full11n-minioctl-roml-pno-wme-aoe-pktfilter-keepalive.bin \
     vendor/motorola/olympus/proprietary/etc/wl/sdio-g-cdc-roml-reclaim-wme-apsta-idauth-minioctl.bin:system/etc/wl/sdio-g-cdc-roml-reclaim-wme-apsta-idauth-minioctl.bin \
+    vendor/motorola/olympus/proprietary/etc/BCM4329B1_002.002.023.0757.0780.hcd:system/etc/BCM4329B1_002.002.023.0757.0780.hcd \
     vendor/motorola/olympus/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 
@@ -84,7 +94,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/etc/touchpad/20/touchpad.cfg:system/etc/touchpad/20/touchpad.cfg \
     vendor/motorola/olympus/proprietary/etc/touchpad/21/touchpad.cfg:system/etc/touchpad/21/touchpad.cfg \
-    vendor/motorola/olympus/proprietary/etc/touchpad/22/touchpad.cfg:system/etc/touchpad/22/touchpad.cfg
+    vendor/motorola/olympus/proprietary/etc/touchpad/22/touchpad.cfg:system/etc/touchpad/22/touchpad.cfg \
+    vendor/motorola/olympus/proprietary/etc/ppp/peers/pppd-ril.options:system/etc/ppp/peers/pppd-ril.options
 
 # system libs
 PRODUCT_COPY_FILES += \
@@ -96,7 +107,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/lib/libnvmm_manager.so:system/lib/libnvmm_manager.so \
     vendor/motorola/olympus/proprietary/lib/libcamera.so:obj/lib/libcamera.so \
     vendor/motorola/olympus/proprietary/lib/libcamera.so:system/lib/libcamera.so \
-    vendor/motorola/olympus/proprietary/lib/libcamera_client.so:system/lib/libcamera_client.so \
     vendor/motorola/olympus/proprietary/lib/libnvodm_imager.so:system/lib/libnvodm_imager.so \
     vendor/motorola/olympus/proprietary/lib/libnvddk_2d.so:system/lib/libnvddk_2d.so \
     vendor/motorola/olympus/proprietary/lib/libnvmm_utils.so:system/lib/libnvmm_utils.so \
@@ -106,7 +116,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/lib/libnvddk_audiofx.so:system/lib/libnvddk_audiofx.so \
     vendor/motorola/olympus/proprietary/lib/libnvodm_dtvtuner.so:system/lib/libnvodm_dtvtuner.so \
     vendor/motorola/olympus/proprietary/lib/libnvdispatch_helper.so:system/lib/libnvdispatch_helper.so \
-    vendor/motorola/olympus/proprietary/lib/libnvomxilclient.so:system/lib/libnvomxilclient.so \
     vendor/motorola/olympus/proprietary/lib/libcgdrv.so:system/lib/libcgdrv.so \
     vendor/motorola/olympus/proprietary/lib/libnvmm_audio.so:system/lib/libnvmm_audio.so \
     vendor/motorola/olympus/proprietary/lib/libnvmm_contentpipe.so:system/lib/libnvmm_contentpipe.so \
@@ -119,11 +128,16 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/lib/libnvmm_vp6_video.so:system/lib/libnvmm_vp6_video.so \
     vendor/motorola/olympus/proprietary/lib/libnvmm_writer.so:system/lib/libnvmm_writer.so \
     vendor/motorola/olympus/proprietary/lib/libnvmm_service.so:system/lib/libnvmm_service.so \
-    vendor/motorola/olympus/proprietary/lib/libnvomx.so:system/lib/libnvomx.so \
     vendor/motorola/olympus/proprietary/lib/libnvos.so:system/lib/libnvos.so \
     vendor/motorola/olympus/proprietary/lib/libnvodm_query.so:system/lib/libnvodm_query.so \
     vendor/motorola/olympus/proprietary/lib/libnvodm_misc.so:system/lib/libnvodm_misc.so \
     vendor/motorola/olympus/proprietary/lib/libnvrm_graphics.so:system/lib/libnvrm_graphics.so \
+    vendor/motorola/olympus/proprietary/lib/libnvddk_aes_user.so:system/lib/libnvddk_aes_user.so \
+    vendor/motorola/olympus/proprietary/lib/libpppd_plugin.so:system/lib/libpppd_plugin.so \
+    vendor/motorola/olympus/proprietary/lib/libpppd_plugin-ril.so:system/lib/libpppd_plugin-ril.so \
+    vendor/motorola/olympus/proprietary/lib/libtpa.so:system/lib/libtpa.so \
+    vendor/motorola/olympus/proprietary/lib/libtpa_core.so:system/lib/libtpa_core.so \
+    vendor/motorola/olympus/proprietary/lib/libril.so:system/lib/libril.so \
     vendor/motorola/olympus/proprietary/lib/libril_rds.so:system/lib/libril_rds.so \
     vendor/motorola/olympus/proprietary/lib/libmoto_ril.so:system/lib/libmoto_ril.so \
     vendor/motorola/olympus/proprietary/lib/librds_util.so:system/lib/librds_util.so \
@@ -132,4 +146,15 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/lib/libnmea.so:system/lib/libnmea.so \
     vendor/motorola/olympus/proprietary/lib/libbattd.so:system/lib/libbattd.so \
     vendor/motorola/olympus/proprietary/lib/libnvrm_channel.so:system/lib/libnvrm_channel.so
+
+# VIDEO
+PRODUCT_COPY_FILES += \
+    vendor/motorola/olympus/proprietary/lib/libnvomx.so:system/lib/libnvomx.so \
+    vendor/motorola/olympus/proprietary/lib/libnvomxilclient.so:system/lib/libnvomxilclient.so \
+    vendor/motorola/olympus/proprietary/lib/libomx_aacdec_sharedlibrary.so:system/lib/libomx_aacdec_sharedlibrary.so \
+    vendor/motorola/olympus/proprietary/lib/libomx_amrdec_sharedlibrary.so:system/lib/libomx_amrdec_sharedlibrary.so \
+    vendor/motorola/olympus/proprietary/lib/libomx_avcdec_sharedlibrary.so:system/lib/libomx_avcdec_sharedlibrary.so \
+    vendor/motorola/olympus/proprietary/lib/libomx_m4vdec_sharedlibrary.so:system/lib/libomx_m4vdec_sharedlibrary.so \
+    vendor/motorola/olympus/proprietary/lib/libomx_mp3dec_sharedlibrary.so:system/lib/libomx_mp3dec_sharedlibrary.so \
+    vendor/motorola/olympus/proprietary/lib/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so
 
