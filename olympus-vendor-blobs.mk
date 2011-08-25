@@ -40,6 +40,7 @@ PRODUCT_COPY_FILES += \
 # Bin
 PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/bin/mot_boot_mode:system/bin/mot_boot_mode \
+    vendor/motorola/olympus/proprietary/bin/charge_only_mode:system/bin/charge_only_mode \
     vendor/motorola/olympus/proprietary/bin/ap_gain.bin:system/bin/ap_gain.bin \
     vendor/motorola/olympus/proprietary/bin/nvrm_daemon:system/bin/nvrm_daemon \
     vendor/motorola/olympus/proprietary/bin/nvrm_avp.axf:system/bin/nvrm_avp.axf \
@@ -65,7 +66,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/bin/nvddk_audiofx_transport.axf:system/bin/nvddk_audiofx_transport.axf \
     vendor/motorola/olympus/proprietary/bin/nvddk_audiofx_core.axf:system/bin/nvddk_audiofx_core.axf \
     vendor/motorola/olympus/proprietary/bin/tund:system/bin/tund \
-    vendor/motorola/olympus/proprietary/bin/bluetoothd:system/bin/bluetoothd \
+    vendor/motorola/olympus/proprietary/bin/bt_init:system/bin/bt_init \
+    vendor/motorola/olympus/proprietary/bin/bt_downloader:system/bin/bt_downloader \
     vendor/motorola/olympus/proprietary/bin/sdptool:system/bin/sdptool \
     vendor/motorola/olympus/proprietary/bin/Hostapd:system/bin/Hostapd \
     vendor/motorola/olympus/proprietary/bin/remountpds:system/bin/remountpds \
@@ -74,6 +76,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/bin/mdm_panicd:system/bin/mdm_panicd \
     vendor/motorola/olympus/proprietary/bin/rild:system/bin/rild \
     vendor/motorola/olympus/proprietary/bin/pppd:system/bin/pppd \
+    vendor/motorola/olympus/proprietary/bin/akmd2:system/bin/akmd2 \
     vendor/motorola/olympus/proprietary/bin/secclkd:system/bin/secclkd \
     vendor/motorola/olympus/proprietary/bin/testpppd:system/bin/testpppd \
     vendor/motorola/olympus/proprietary/bin/pppd-ril:system/bin/pppd-ril \
@@ -86,15 +89,15 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/etc/wl/sdio-ag-cdc-11n-mfgtest-roml-seqcmds.bin:system/etc/wl/sdio-ag-cdc-11n-mfgtest-roml-seqcmds.bin \
     vendor/motorola/olympus/proprietary/etc/wl/sdio-ag-cdc-full11n-minioctl-roml-pno-wme-aoe-pktfilter-keepalive.bin:system/etc/wl/sdio-ag-cdc-full11n-minioctl-roml-pno-wme-aoe-pktfilter-keepalive.bin \
     vendor/motorola/olympus/proprietary/etc/wl/sdio-g-cdc-roml-reclaim-wme-apsta-idauth-minioctl.bin:system/etc/wl/sdio-g-cdc-roml-reclaim-wme-apsta-idauth-minioctl.bin \
-    vendor/motorola/olympus/proprietary/etc/BCM4329B1_002.002.023.0757.0780.hcd:system/etc/BCM4329B1_002.002.023.0757.0780.hcd \
-    vendor/motorola/olympus/proprietary/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
-
+    vendor/motorola/olympus/proprietary/etc/BCM4329B1_002.002.023.0757.0780.hcd:system/etc/BCM4329B1_002.002.023.0757.0780.hcd
 
 # subsystem configurations
 PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/etc/touchpad/20/touchpad.cfg:system/etc/touchpad/20/touchpad.cfg \
     vendor/motorola/olympus/proprietary/etc/touchpad/21/touchpad.cfg:system/etc/touchpad/21/touchpad.cfg \
     vendor/motorola/olympus/proprietary/etc/touchpad/22/touchpad.cfg:system/etc/touchpad/22/touchpad.cfg \
+    vendor/motorola/olympus/proprietary/etc/bt_init.config:system/etc/bt_init.config \
+    vendor/motorola/olympus/proprietary/app/FastDormancy.apk:system/app/FastDormancy.apk \
     vendor/motorola/olympus/proprietary/etc/ppp/peers/pppd-ril.options:system/etc/ppp/peers/pppd-ril.options
 
 # system libs
@@ -142,7 +145,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/lib/libmoto_ril.so:system/lib/libmoto_ril.so \
     vendor/motorola/olympus/proprietary/lib/librds_util.so:system/lib/librds_util.so \
     vendor/motorola/olympus/proprietary/lib/liba2dp.so:system/lib/liba2dp.so \
-    vendor/motorola/olympus/proprietary/lib/libbluetoothd.so:system/lib/libbluetoothd.so \
     vendor/motorola/olympus/proprietary/lib/libnmea.so:system/lib/libnmea.so \
     vendor/motorola/olympus/proprietary/lib/libbattd.so:system/lib/libbattd.so \
     vendor/motorola/olympus/proprietary/lib/libnvrm_channel.so:system/lib/libnvrm_channel.so
