@@ -73,6 +73,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/bin/remountpds:system/bin/remountpds \
     vendor/motorola/olympus/proprietary/bin/battd:system/bin/battd \
     vendor/motorola/olympus/proprietary/bin/usbd:system/bin/usbd \
+    vendor/motorola/olympus/proprietary/bin/whisperd:system/bin/whisperd \
     vendor/motorola/olympus/proprietary/bin/mdm_panicd:system/bin/mdm_panicd \
     vendor/motorola/olympus/proprietary/bin/rild:system/bin/rild \
     vendor/motorola/olympus/proprietary/bin/pppd:system/bin/pppd \
@@ -81,6 +82,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/olympus/proprietary/bin/testpppd:system/bin/testpppd \
     vendor/motorola/olympus/proprietary/bin/pppd-ril:system/bin/pppd-ril \
     vendor/motorola/olympus/proprietary/bin/chat-ril:system/bin/chat-ril \
+    vendor/motorola/olympus/proprietary/bin/ftmipcd:system/bin/ftmipcd \
     vendor/motorola/olympus/proprietary/bin/touchpad:system/bin/touchpad
 
 # Wifi/bt firmware
